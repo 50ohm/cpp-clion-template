@@ -22,6 +22,8 @@ include(CMakeDependencies.cmake)
 #
 add_library(experiment SHARED
         src/experiment.cpp)
+target_include_directories(experiment PRIVATE
+        ${PROJECT_SOURCE_DIR}/include)
 
 # The test executable comprises a suite of tests (assuming you'll be
 # adding more) and the test runner `main()`. The `main.cpp` should be
